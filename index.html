@@ -1,0 +1,930 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>HTML</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="libs/shower/themes/bright/styles/screen.css">
+	<link rel="stylesheet" href="libs/highlight/styles/default.css">
+	<link rel="stylesheet" type="text/css" href="css/960gs.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<style type="text/css">
+	pre code {
+		font-size: 0.7em;
+	}
+
+	iframe {
+		height: 350px;
+	}
+
+	.cover h2 {
+		margin:30px 0 0;
+		color:#FFF;
+		text-align:center;
+		font-size:70px;
+	}
+	.cover p {
+		margin:10px 0 0;
+		text-align:center;
+		color:#FFF;
+		font-style:italic;
+		font-size:20px;
+	}
+	.cover p a {
+		color:#FFF;
+	}
+	</style>
+
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>HTML</h1>
+		<p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+	</header>
+	<section class="slide cover" id="Cover">
+		<div>
+			<h2>HTML</h2>
+			<p>João Eduardo Montandon</p>
+			<p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+			<img src="pictures/wallpaper_coltec_wide.png" alt="" />
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>HTML</h2>
+			<ul>
+				<li><em>Hypertext Markup Language</em></li>
+				<li>Linguagem voltada para marcação/estruturação de documentos da web</li>
+				<li>Responsáveis pela <b>estrutura</b> da página web</li>
+				<li>Baseada em <em>tags</em> XML</li>
+				<li>As <em>tags</em> são interpretadas pelo browser, e então o conteúdo é exibido para o usuário</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>HTML</h2>
+
+			<div class="grid_5">
+				<pre>
+					<code>
+&lt;p&gt;HTML&lt;/p&gt;
+&lt;p&gt;DAW. Coltec/UFMG.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;HTML - Definições&lt;/li&gt;
+    &lt;li&gt;Estrutura HTML&lt;/li&gt;
+    &lt;li&gt;Principais Tags&lt;/li&gt;
+&lt;/ul&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_2" style="font-size:4.0em;">&#10159;</div>
+			<div class="grid_5">
+				<iframe src="examples/intro.html" frameborder="1"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>HTML - <em>Tags</em></h2>
+			<ul>
+				<li>A linguagem possui um conjunto de <em>tags</em> XML utilizadas para descrever sua estrutura</li>
+				<li>Toda <em>tag</em> possui <mark class="coment">atributo</mark> e <mark class="important">valor</mark></li>
+			</ul>
+
+			<pre>
+				<code>
+			&lt;a <mark class="coment">href="http://www.google.com.br"</mark>&gt;<mark class="important">Clique aqui</mark>&lt;/a&gt;
+				</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><em>Tags</em> - Atributos</h2>
+			<ul>
+				<li>Uma <em>tag</em> pode ter 0 ou mais atributos</li>
+				<li>Um atributo é uma tupla de dados</li>
+				<li>São utilizados para definirem propriedades da <em>tag</em></li>
+			</ul>
+
+			<pre>
+				<code>
+		&lt;tag attr1="valor1" attr2="valor2" attr3="valor3"&gt;...&lt;/tag&gt;
+				</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><em>Tags</em> - Valor</h2>
+			<ul>
+				<li>Valor: conteúdo a ser exibido pela <em>tag</em></li>
+				<li>HTML permite fazer o aninhamento de <em>tags</em></li>
+			</ul>
+			<div class="container_12">
+				<div class="grid_6">
+					<pre>
+				<code>
+&lt;tag ...&gt; valor da tag &lt;/tag&gt;
+				</code>
+			</pre>
+				</div>
+				<div class="grid_6">
+					<pre>
+				<code>
+&lt;tag ...&gt;
+	&lt;tag ...&gt; texto &lt;/tag&gt;
+&lt;/tag&gt;
+				</code>
+			</pre>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>HTML - Estrutura Básica</h2>
+			<pre>
+				<code>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+<mark class="important">&lt;html&gt;</mark>
+    <mark class="coment">&lt;head&gt;</mark>
+         &lt;title&gt;Minha primeira página HTML&lt;/title&gt;
+    <mark class="coment">&lt;/head&gt;</mark>
+    <mark class="coment">&lt;body&gt;</mark>
+         &lt;!– meu comentário —&gt;
+         &lt;p&gt; Essa é a minha primeira página web. &lt;/p&gt;
+    <mark class="coment">&lt;/body&gt;</mark>
+<mark class="important">&lt;/html&gt;</mark>
+				</code>
+			</pre>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>HTML - Estrutura Básica</h2>
+			<ul>
+				<li><code>&lt;!DOCTYPE&gt;</code>: Versão do documento HTML</li>
+				<li><code>&lt;html&gt;</code>: delimita a página HTML</li>
+				<li><code>&lt;head&gt;</code>: Cabeçalho da página. Contém informações de configuração da página</li>
+				<li><code>&lt;body&gt;</code>: Corpo da página. Contém toda informação que será exibida para o funcionário</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div class="container_12">
+			<div class="grid_12">
+				<h2>HTML - Exemplos</h2>
+			</div>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size:0.5em;">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+         &lt;title&gt;Minha primeira página HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+		&lt;p&gt;Isso é um parágrafo&lt;/p&gt;
+		&lt;h1&gt;Primeiro Título&lt;/h1&gt;
+		&lt;h2&gt;Segundo Título&lt;/h2&gt;
+		&lt;h3&gt;Terceiro Título&lt;/h3&gt;
+		&lt;h4&gt;Quarta Título&lt;/h4&gt;
+		&lt;h5&gt;Quinta Título&lt;/h5&gt;
+		&lt;h6&gt;Sexto Título&lt;/h6&gt;
+		&lt;a href="http://www.google.com"&gt; Google &lt;/a&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_1.html"></iframe>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="slide">
+		<div class="container_12">
+			<div class="grid_12">
+				<h2>HTML - Exemplos</h2>
+			</div>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size:0.5em;">
+&lt;div style="background-color:orange;
+text-align:center"&gt;
+	&lt;p&gt;Coloque um texto aqui.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style="border:1px solid black"&gt;
+	&lt;p&gt;Coloque o conteúdo aqui.&lt;/p&gt;
+&lt;/div&gt;
+&lt;table border = "1"&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Cell 1&lt;/td&gt;
+		&lt;td&gt;Cell 2&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_2.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div class="container_12">
+			<div class="grid_12">
+				<h2>HTML - Exemplos</h2>
+			</div>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size:0.5em;">
+&lt;input type="text" name="nome" value=""
+	maxlength="100"/&gt;
+&lt;button id="botao1" name="clique" value="Submit"
+	type="button"&gt;Clique me&lt;/button&gt;
+&lt;menu&gt;
+	&lt;li&gt;Abacaxi&lt;/li&gt;
+	&lt;li&gt;Maçã&lt;/li&gt;
+	&lt;li&gt;Laranja&lt;/li&gt;
+&lt;/menu&gt;
+&lt;label&gt;None&lt;/label&gt;
+&lt;img src="../pictures/google-logo.jpg"
+	width="225" alt="Google it"/&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_3.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+		<style type="text/css">
+	pre code {
+		font-size: 0.8em;
+	}
+
+	iframe {
+		height: 350px;
+	}
+
+	fieldset {
+		display: block;
+		margin-left: 2px;
+		margin-right: 2px;
+		padding-top: 0.35em;
+		padding-bottom: 0.625em;
+		padding-left: 0.75em;
+		padding-right: 0.75em;
+		border: 2px groove;
+	}
+
+	</style>
+
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>HTML - Principais Elementos</h1>
+		<p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+	</header>
+	<section class="slide cover">
+		<div>
+			<h2>HTML - Principais Elementos</h2>
+			<p>João Eduardo Montandon</p>
+			<p>Desenvolvimento de Aplicativos Web - COLTEC/MG</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Introdução</h2>
+			<p>
+				A linguagem HTML fornece uma série de elementos que ajudam na estruturação de uma página web
+			</p>
+
+			Os principais elementos estão relacionados a:
+			<ol>
+				<li>Manipulação de Texto</li>
+				<li><em>Containers</em></li>
+				<li>Formulários</li>
+				<li>Elementos Multimedia</li>
+			</ol>
+		</div>
+	</section>
+
+
+	<section class="slide section">
+		<div>
+			<h2>Manipulação de Texto</h2>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Manipulação de Texto</h2>
+			<p>
+				Contém elementos que fazem a estruturação textual da página
+			</p>
+			<ul>
+				<li><em>Headings</em></li>
+				<li>Formatação</li>
+				<li>Parágrafos</li>
+				<li>Listas</li>
+				<li>etc..</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Texto - Headings</h2>
+			<div class="grid_6">
+				<pre>
+					<code>
+&lt;h1&gt;Titulo 1&lt;/h1&gt;
+
+&lt;h2&gt;Titulo 2&lt;/h2&gt;
+
+&lt;h3&gt;Titulo 3&lt;/h3&gt;
+
+&lt;h4&gt;Titulo 4&lt;/h4&gt;
+
+&lt;h5&gt;Titulo 5&lt;/h5&gt;
+
+&lt;h6&gt;Titulo 6&lt;/h6&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_heading.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Texto - Formatação</h2>
+			<div class="grid_6">
+				<pre>
+					<code>
+&lt;b&gt;Frase em negrito&lt;/b&gt;
+
+&lt;strong&gt;Frase STRONG!!&lt;/strong&gt;
+
+&lt;i&gt;Texto em italico&lt;/i&gt;
+
+&lt;em&gt;Enfatizando essa frase&lt;/em&gt;
+
+&lt;code&gt;System.out.println("oi");&lt;/code&gt;
+
+x&lt;sub&gt;2&lt;/sub&gt; diferente de x&lt;sup&gt;2&lt;/sup&gt;
+
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_formatacao.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Texto - Parágrafos</h2>
+			<div class="grid_6">
+				<pre>
+					<code>
+&lt;p&gt;
+Lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna.
+&lt;/p&gt;
+&lt;p&gt;
+Duis aute irure dolor in reprehenderit
+voluptate velit esse cillum dolore
+nulla pariatur.
+&lt;/p&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_paragrafos.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Texto - Listas</h2>
+			<div class="grid_6">
+				<pre>
+					<code>
+&lt;ol&gt;
+	&lt;li&gt;Questão 1&lt;/li&gt;
+	&lt;li&gt;Questão 2&lt;/li&gt;
+	&lt;li&gt;Questão 3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+	&lt;li&gt;Item 1&lt;/li&gt;
+	&lt;li&gt;Item 2&lt;/li&gt;
+	&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_listas.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide section">
+		<div>
+			<h2><em>Containers</em></h2>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Containers</h2>
+			<p>
+				Principal característica: Agrupam demais componentes HTML
+			</p>
+			<ul>
+				<li>Header</li>
+				<li>Body</li>
+				<li>Divs</li>
+				<li>Tables</li>
+				<li>Footer</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Containers - <code>head</code></h2>
+			<p style="margin-bottom: 18px;">
+				Cabeçalho onde são armazenadas informações da página (Título, CSS, meta tags, etc.).
+			</p>
+				<pre>
+					<code style="font-size: 0.6em;" class="html">&lt;head&gt;
+&lt;title&gt;Exemplo de header&lt;/title&gt;
+&lt;style type="text/css"&gt;
+&lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+	//código javascript
+&lt;/script&gt;
+&lt;meta name="blablabla" /&gt;
+&lt;script src="scripts/meuJS.js" /&gt;
+&lt;/head&gt;
+					</code>
+				</pre>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Containers - <code>body</code></h2>
+			<div class="grid_7">
+				<pre>
+					<code style="font-size: 0.5em;" class="html">
+&lt;body&gt;
+&lt;h3&gt;Introdução&lt;/h3&gt;
+&lt;p&gt;A &lt;i&gt;World Wide Web&lt;/i&gt;, criada por
+Tim Berners-Lee, surgiu em 1989/1990, no laboratório do
+CERN. Seu objetivo inicial era prover um canal onde os
+cientistas pudessem publicar e visualizar seus trabalhos
+ científicos.&lt;/p&gt;
+&lt;p&gt;A &lt;i&gt;Web&lt;/i&gt; é baseada em três
+tecnologias principais:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hypertext Transfer Protocol (HTTP)&lt;/li&gt;
+&lt;li&gt;Hypertext Markup Language (HTML)&lt;/li&gt;
+&lt;li&gt;Protocolo TCP/IP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_5">
+				<iframe src="examples/example_body.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Containers - <code>div</code>s</h2>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size: 0.5em;" class="html">
+&lt;div id="mainPanel" style="float:left;
+width:60%; display:block"&gt;
+	&lt;p&gt;Este é o painel principal. Ele contém o
+	texto principal da sua página web. Este é o painel
+	principal. Ele contém o texto principal da sua
+	página web.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="sidePanel" style="float:right; width:30%;"&gt;
+	&lt;p&gt;Este é o painel lateral. Ele contém informações
+	relacionadas ao painel principal, como textos
+	semelhantes, ou já navegados anteriormente.&lt;/p&gt;
+&lt;/div&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_divs.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Containers - <code>table</code></h2>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size: 0.6em;" class="html">
+&lt;table border="1px"&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1&lt;/td&gt;
+		&lt;td&gt;2&lt;/td&gt;
+		&lt;td&gt;3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;4 e 5&lt;/td&gt;
+		&lt;td&gt;6&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="3"&gt;7, 8 e 9&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_table.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Containers - <code>footer</code></h2>
+			<p class="note" style="margin-bottom: 18px;">Recurso disponível apenas no HTML 5!!</p>
+			<div class="grid_6">
+				<pre>
+					<code style="font-size: 0.6em;">
+&lt;footer&gt;
+	&lt;p&gt;Desenvolvido por: ACME Corporation&lt;/p&gt;
+	&lt;p&gt;Contato:
+		&lt;a href="mailto:contato@acme.com"&gt;
+		contato@acme.com&lt;/a&gt;.
+	&lt;/p&gt;
+&lt;/footer&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_6">
+				<iframe src="examples/example_footer.html"></iframe>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide section">
+		<div>
+			<h2>Multimedia</h2>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Multimedia</h2>
+			<p>
+				Elementos que permitem inserir elementos multimedia na página.
+			</p>
+			<ul>
+				<li>Link</li>
+				<li>Imagens</li>
+				<li>iFrames</li>
+				<li>etc..</li>
+			</ul>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Multimedia - link</h2>
+				<pre>
+					<code class="html">
+&lt;a href="http://www.google.com" target="_blank"&gt;Click me&lt;/a&gt;.
+					</code>
+				</pre>
+					Principais atributos:
+					<ul>
+						<li>href: link da página a ser carregada</li>
+						<li>target: define se a página será aberta em outra janela
+							<ul>
+								<li>_blank: nova página</li>
+								<li>_self: mesma página</li>
+							</ul>
+						</li>
+					</ul>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Multimedia - Imagens</h2>
+				<pre>
+					<code class="html">
+&lt;img src="http://www.uol.com.br/uploads/29111.jpg" alt="2911" /&gt;
+					</code>
+				</pre>
+				Principais atributos:
+				<ul>
+					<li>src: fonte da imagem</li>
+					<li>alt: texto alternativo da imagem</li>
+				</ul>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Multimedia - iFrames</h2>
+			<pre>
+				<code class="html">
+&lt;iframe src="http://www.uol.com.br/"&gt;&lt;/iframe&gt;
+				</code>
+			</pre>
+
+			Principais atributos:
+			<ul>
+				<li>src: fonte da página a ser carregada</li>
+				<li>width: largura do frame</li>
+				<li>height: altura do frame</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="slide section">
+		<div>
+			<h2>Formulários</h2>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Formulários</h2>
+			<ul>
+				<li>Mecanismo de comunicação básica entre usuário e aplicação web</li>
+				<li>Permite ao usuário enviar suas informações para a aplicação</li>
+				<li>HTML possui uma série de elementos de entrada de dados, onde o usuário pode fornecer este tipo de informação</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Formulários</h2>
+			<p>
+				Estrutura básica
+			</p>
+			<pre>
+				<code>
+&lt;form&gt;
+	Username: &lt;input type="text" name="username"&gt; &lt;br&gt;
+	Password: &lt;input type="password" name=“pwd"&gt; &lt;br&gt;
+	&lt;input type="submit" value="Log in"&gt;
+&lt;/form&gt;
+				</code>
+			</pre>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Formulários</h2>
+			<p>
+				As entradas de dados são feitas através de três tipos de componentes:
+			</p>
+
+			<ul>
+				<li><code>&lt;input&gt;</code>: texto, senhas, checkbox, radio buttons, botão submit, botão reset;</li>
+				<li><code>&lt;select&gt;</code>: listbox, combobox;</li>
+				<li><code>&lt;textarea&gt;</code>: texto em várias linhas;</li>
+			</ul>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Formulários - <code>input</code></h2>
+			<pre>
+				<code class="html" style="font-size: 0.6em;">
+&lt;form&gt;
+	Username: &lt;input type="text" name="username"&gt;
+	Password: &lt;input type="password" name="pwd"&gt;
+	Sex: &lt;input type="radio" name="sex" value="male"&gt;Male&lt;/input&gt;
+	&lt;input type="radio" name="sex" value="female"&gt;Female&lt;/input&gt;
+
+	Vehicles: &lt;input type="checkbox" name="vehicle" value="bike"&gt;Bike&lt;/input&gt;
+	&lt;input type="checkbox" name="vehicle" value="motocycle"&gt;Motocycle&lt;/input&gt;
+	&lt;input type="checkbox" name="vehicle" value="car"&gt;Car&lt;/input&gt;
+
+	&lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+				</code>
+			</pre>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div>
+			<h2>Formulários - <code>input</code></h2>
+			<p>
+				Principais Atributos:
+			</p>
+			<ul>
+				<li><code>autocomplete</code>: auto-completar</li>
+				<li><code>checked</code>: marca elemento como default</li>
+				<li><code>name</code>: nome do elemento</li>
+				<li><code>type</code>: tipo do elemento de entrada</li>
+				<li><code>value</code>: valor do elemento</li>
+				<li><a href="http://www.w3schools.com/html/html_form_attributes.asp">etc, etc..</a></li>
+			</ul>
+
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Formulários - <code>select</code></h2>
+			<div class="grid_8">
+				<pre>
+					<code>
+&lt;form&gt;
+	Choose an option:
+	&lt;select name="cars"&gt;
+		&lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+		&lt;option value="saab"&gt;Saab&lt;/option&gt;
+		&lt;option value="fiat"&gt;Fiat&lt;/option&gt;
+		&lt;option value="audi"&gt;Audi&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_4">
+				<form>
+					Choose an option:
+					<select name="cars" style="width:100px;">
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+					</select>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Formulários - <code>textarea</code></h2>
+			<div class="grid_9">
+				<pre>
+					<code>
+&lt;form&gt;
+&lt;textarea rows="10" cols="30"&gt;
+	The cat was playing in the garden.
+&lt;/textarea&gt;
+&lt;/form&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_3">
+				<form>
+				<textarea rows="10" cols="30">
+The cat was playing in the garden.
+				</textarea>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="slide">
+		<div class="container_12">
+			<h2>Formulários - <code>fieldset</code></h2>
+			<p style="margin-bottom: 18px;">
+				Permite o agrupamento de elementos do formulário em seções.
+			</p>
+			<div class="grid_8">
+				<pre>
+					<code style="font-size:0.6em;">
+&lt;form&gt;
+&lt;fieldset&gt;
+	&lt;legend&gt;Personal information:&lt;/legend&gt;
+	Name: &lt;input type="text" size="30"&gt;&lt;br&gt;
+	E-mail: &lt;input type="text" size="30"&gt;&lt;br&gt;
+	Date of birth: &lt;input type="text" size="10"&gt;
+&lt;/fieldset&gt;
+&lt;/form&gt;
+					</code>
+				</pre>
+			</div>
+			<div class="grid_4">
+				<form style="font-size: 12px;">
+				<fieldset>
+					<legend>Personal information:</legend>
+					Name: <input type="text" size="30"><br>
+					E-mail: <input type="text" size="30"><br>
+					Date of birth: <input type="text" size="10">
+				</fieldset>
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="slide">
+		<div>
+			<h2>Referências</h2>
+			<p><a href="http://www.w3schools.com/">w3schools: HTML</a></p>
+			<p><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Mozilla Developer Network: HTML</a></p>
+		</div>
+	</section>
+
+	<div class="progress"><div></div></div>
+	<script src="libs/shower/shower.min.js"></script>
+	<script src="libs/highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
